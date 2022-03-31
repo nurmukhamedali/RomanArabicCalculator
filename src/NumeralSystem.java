@@ -13,11 +13,11 @@ public class NumeralSystem {
         return s;
     }
     public static Integer RomanToArabic(String number){
-        /* Linearly moves from most significant to last
-          1st cycle checks is Roman number combined(Ex. IV, IX, XL).
-          2nd cycle checks single Roman digits
-          every cycle adds value to result value
-          for INVALID number raises -1 */
+        /** Linearly moves from most significant to last
+         * 1st cycle checks is Roman number combined(Ex. IV, IX, XL).
+         * 2nd cycle checks single Roman digits
+         * every cycle adds value to result value
+         * for INVALID number raises -1 */
         number += " "; // for pass index out of range. Bad code, but I don't care TODO #refactoring
         int result = 0;
         for (int i = 0, j = 2; i < number.length() - 1; i++, j++) {
