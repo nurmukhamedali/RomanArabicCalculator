@@ -22,9 +22,15 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        testNumeralSystem();
-        int x = NumeralSystem.RomanToArabic("II");
-        System.out.println(x);
+        String x = NumeralSystem.ArabicToRoman(6);
+        String y = NumeralSystem.ArabicToRoman(6);
+
+        RomanArabic xr = new RomanArabic(x);
+        RomanArabic yr = new RomanArabic(x);
+
+        RomanArabic result = BinaryOperation.ADD.execute(xr, yr);
+
+        System.out.println(result.getRomanValue());
     }
 
 }
